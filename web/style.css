@@ -164,8 +164,8 @@ table {
   padding-left: 5px;
 }
 #fourthtext > a {
-  height: 1.8rem;
-  line-height: 1.8rem;
+  height: 40px;
+  line-height: 40px;
   width: 100%;
   border-bottom: 1px solid #4d4d4f;
   background-color: transparent;
