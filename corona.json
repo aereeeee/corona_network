@@ -1,0 +1,304 @@
+{
+  "nodes": [
+    {
+      "group": "A",
+      "number": 0,
+      "value": "2020-01-20",
+      "name": "우한",
+      "connect": "",
+      "status": "",
+      "sbsarticle": [
+        {
+          "link": "www.sbs.com",
+          "title": "뉴스ㅁㄴㅇㄹㅁㅇㄹㄴ아ㅓ란오란오라농라먼오라ㅓㅗ아러ㅗㅁ나롸어ㅗ말너ㅗㅇ라너오라ㅓ"
+        },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" },
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" },
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" },
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" },
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "number": 1,
+      "value": "2020-01-20",
+      "name": "1번",
+      "connect": "1차 감염",
+      "status": "폐렴",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "number": 2,
+      "name": "2번",
+      "value": "2020-01-24",
+      "connect": "1차 감염",
+      "status": "치료중",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "name": "3번",
+      "number": 3,
+      "value": "2020-01-26",
+      "connect": "1차 감염",
+      "status": "치료중",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "name": "4번",
+      "number": 4,
+      "value": "2020-01-27",
+      "connect": "1차 감염",
+      "status": "폐렴",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "name": "5번",
+      "number": 5,
+      "value": "2020-01-30",
+      "connect": "1차 감염",
+      "status": "치료중",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "B",
+      "name": "6번",
+      "number": 6,
+      "value": "2020-01-30",
+      "connect": "2차 감염",
+      "status": "치료중",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "name": "7번",
+      "number": 7,
+      "value": "2020-01-30",
+      "connect": "1차 감염",
+      "status": "치료중",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "name": "8번",
+      "number": 8,
+      "value": "2020-01-31",
+      "connect": "1차 감염",
+      "status": "치료중",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "C",
+      "name": "9번",
+      "number": 9,
+      "value": "2020-01-31",
+      "connect": "3차 감염",
+      "status": "NA",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "C",
+      "name": "10번",
+      "number": 10,
+      "value": "2020-01-31",
+      "connect": "3차 감염",
+      "status": "NA",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "1번",
+      "target": 1,
+      "value": "2020-01-20",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "2번",
+      "target": 2,
+      "value": "2020-01-24",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "3번",
+      "target": 3,
+      "value": "2020-01-26",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "4번",
+      "target": 4,
+      "value": "2020-01-27",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "5번",
+      "target": 5,
+      "value": "2020-01-30",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "7번",
+      "target": 7,
+      "value": "2020-01-30",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "8번",
+      "target": 8,
+      "value": "2020-01-31",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "B",
+      "start": "3번",
+      "source": 3,
+      "end": "6번",
+      "target": 6,
+      "value": "2020-01-30",
+      "connect": "2차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "C",
+      "start": "6번",
+      "source": 6,
+      "end": "9번",
+      "target": 9,
+      "value": "2020-01-31",
+      "connect": "3차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    },
+    {
+      "group": "C",
+      "start": "6번",
+      "source": 6,
+      "end": "10번",
+      "target": 10,
+      "value": "2020-01-31",
+      "connect": "3차 감염",
+      "sbsarticle": [
+        { "link": "www.sbs.com", "title": "뉴스" },
+        { "link": "www.sbs.com", "title": "뉴스1" },
+        { "link": "www.sbs.com", "title": "뉴스2" }
+      ]
+    }
+  ]
+}

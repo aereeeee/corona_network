@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SBS마부작침 : 코로나 바이러스</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <script type="text/javascript">
+      if (!isMobile()) {
+          window.location.href = "../index.html";
+      }
+      function isMobile() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      }
+    </script>
+    <meta property="og:image" content="../mabu.jpg" />
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../js/jquery-ui.css" />
+  </head>
+  <body>
+    <div id="wrapperbefore">
+      <img src="../mabulogo.png" alt="" id="mabulogo2" />
+      <div class="barloading"></div>
+    </div>
+    <div id="wrapper">
+      <h3>신종 코로나 바이러스 확산 관계망</h3>
+      <p id="yeartext"></p>
+      <div id="slider1"></div>
+      <div class="canvas" id="main">
+        <div id="slider"></div>
+      </div>
+      <div id="select">
+        <input
+          type="radio"
+          name="btnA"
+          value="start"
+          id="start"
+          class="btnA"
+          checked
+        /><label for="start">▶</label>
+        <input
+          type="radio"
+          name="btnA"
+          value="stop"
+          id="stop"
+          class="btnA"
+        /><label for="stop"> ||</label>
+        <input
+          type="radio"
+          name="btnA"
+          value="total"
+          id="total"
+          class="btnA"
+        /><label for="total">전체보기</label>
+      </div>
+      <!-- <p class="articletext">* 관계선과 인물을 터치하면 세부정보가 나타납니다. 
+		  <br>* 슬라이더를 움직이면 당시 관계도가 나타납니다.<br>
+      * 연결점을 터치하면 관계선이 강조됩니다. 한번 더 누르면 강조가 취소됩니다.네트워크를 누른 상태에서 움직여보세요.
+    </p> -->
+      <div id="textbox">
+        <h5 id="datatablTitle">인물 혹은 관계선을 터치하세요</h5>
+        <table>
+          <tr>
+            <th id="firsthead"></th>
+            <td class="areaname" id="firsttext"></td>
+          </tr>
+          <tr>
+            <th id="secondhead"></th>
+            <td class="areaname" id="secondtext"></td>
+          </tr>
+          <tr>
+            <th id="thirdhead"></th>
+            <td class="areaname" id="thirdtext"></td>
+          </tr>
+        </table>
+        <div id="fourthhead"></div>
+        <div id="fourthtext"></div>
+        <div class="legendtext">
+          <span style="color:#ff4848;">■</span> 1차 감염
+          <span style="color:#1adbe5;">■</span> 2차 감염
+          <span style="color:#efd952;">■</span> 3차 감염
+          <div class="legendtext"><strong>최종 업데이트</strong> : 2020.01.31</div>
+        </p>
+      </div>
+    </div>
+    </div>
+    <a
+      href="http://news.sbs.co.kr/news/newsPlusList.do?themeId=10000000114"
+      target="_blank"
+    >
+      <div id="footerbar">
+        <img src="mabulogo.png" alt="" id="mabulogo" />
+        <p id="credit">
+          <strong>SBS데이터저널리즘팀 '마부작침'</strong><br />권지윤 기자
+          (legend8169@sbs.co.kr)<br />박원경 기자 (seagull@sbs.co.kr)<br />분석:
+          한창진·장동호 | 디자인/개발: 임송이
+        </p>
+      </div>
+    </a>
+    <script>
+      var width = window.innerWidth;
+      $(".canvas").css("height", width + 30);
+      $(".canvas").css("width", width);
+
+      function loadnow() {
+        $("#wrapperbefore").hide();
+        $("#menubar").show();
+        $("#wrapper").show();
+        $("#main").show();
+      }
+      setTimeout("loadnow()", 2000);
+
+      $(document).ready(function() {
+        (function(i, s, o, g, r, a, m) {
+          i["GoogleAnalyticsObject"] = r;
+          (i[r] =
+            i[r] ||
+            function() {
+              (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+          (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m);
+        })(
+          window,
+          document,
+          "script",
+          "//www.google-analytics.com/analytics.js",
+          "ga"
+        );
+        ga("create", "UA-53828044-1", "auto");
+        ga("require", "displayfeatures");
+        ga("send", "pageview");
+      });
+    </script>
+    <script src="network.js"></script>
+  </body>
+</html>

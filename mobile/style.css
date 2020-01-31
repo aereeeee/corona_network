@@ -1,0 +1,276 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  text-decoration: none;
+}
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  background: #2b292d;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+#teamname {
+  font-size: 0.8em;
+  color: #ffffff;
+  margin: 8px 0px 0px 10px;
+  font-weight: 500;
+  float: left;
+  opacity: 0.5;
+}
+
+#footerbar {
+  width: 100%;
+  height: 90px;
+  background-color: #333333;
+  padding-top: 5px;
+}
+
+#credit {
+  font-size: 0.6em;
+  color: #aaaaaa;
+  font-weight: 350;
+  margin: 10px 0px 0px 10px;
+  text-align: left;
+  float: left;
+}
+
+#mabulogo {
+  width: 70px;
+  height: 30px;
+  float: left;
+  margin: 10px 0px 0px 10px;
+}
+
+/* 로드 */
+#wrapperbefore {
+  width: 100%;
+  padding-top: 200px;
+  height: 800px;
+  text-align: center;
+  /* IE10+ */
+  background-image: -ms-linear-gradient(top, #232526 0%, #414345 100%);
+
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #232526 0%, #414345 100%);
+
+  /* Opera */
+  background-image: -o-linear-gradient(top, #232526 0%, #414345 100%);
+
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #232526),
+    color-stop(100, #414345)
+  );
+
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #232526 0%, #414345 100%);
+
+  /* W3C Markup */
+  background-image: linear-gradient(to bottom, #232526 0%, #414345 100%);
+}
+
+#mabulogo2 {
+  width: 150px;
+  height: 65px;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.barloading {
+  height: 5px;
+  background: #aaa;
+  width: 130px;
+  border-radius: 99px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.barloading::before {
+  width: 0%;
+  background: #f4d037;
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0;
+  bottom: 0;
+  animation: slide 2s infinite linear;
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* 영역 */
+#wrapper {
+  width: 94%;
+  margin: 30px auto 0 auto;
+  height: auto;
+  display: none;
+}
+#slider {
+  width: 100%;
+  height: 100%;
+}
+#textbox {
+  width: 100%;
+  margin-top: 5px;
+}
+
+#select {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+.canvas {
+  display: none;
+  margin-bottom: 5px;
+}
+#category {
+  width: 40%;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid #cccccc;
+  position: absolute;
+  left: 1250px;
+}
+
+#categoryexample {
+  width: 300px;
+  height: 35px;
+  margin: 0 auto;
+  display: none;
+}
+
+#touchmsg {
+  display: none;
+}
+/* 텍스트 */
+h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  color: #fff;
+  margin: 0px 0px 10px 0px;
+  font-weight: 700;
+}
+
+h5,
+#fourthhead {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.2em;
+  color: #f4d037;
+  margin: 0px 0px 10px 0px;
+  font-weight: 700;
+  padding: 5px 0px;
+  border-bottom: 2px solid #f4d037;
+  width: 100%;
+}
+
+.articletext {
+  font-size: 0.8rem;
+  line-height: 1.1em;
+  font-weight: 350;
+  color: #999999;
+}
+.legendtext {
+  font-size: 0.8rem;
+  font-weight: 350;
+  color: #999999;
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+  margin: 0 0 20px 0;
+}
+
+th {
+  color: #fff;
+  height: 30px;
+  width: 20%;
+}
+
+td {
+  width: 70%;
+  height: 30px;
+  padding-left: 10px;
+  color: #fff;
+  font-weight: 250;
+}
+#fourthtext {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  color: #fff;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+#fourthtext > a {
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #4d4d4f;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* 버튼 */
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  float: left;
+  width: 32%;
+  padding: 6px 0;
+  text-align: center;
+  background-color: #4d4d4f;
+  font-size: 0.9em;
+  height: 22px;
+  color: #fff;
+  line-height: 1.2em;
+  margin: 0px 2px 10px 2px;
+}
+
+input[type="radio"] + label:hover {
+  background-color: #af9838;
+  color: #ffffff;
+}
+
+input[type="radio"].btnA:checked + label {
+  background-color: #f4d037;
+  color: #ffffff;
+}
+
+#yeartext {
+  color: #f4d037;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#hidelink {
+  display: none;
+}

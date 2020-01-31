@@ -1,0 +1,283 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  background: #2b292d;
+}
+
+/* ============ 템플릿 ================*/
+.title {
+  margin-top: 50px;
+}
+#mabulogo {
+  width: 80px;
+}
+
+/* ============ 영역 ================*/
+#wrapper {
+  width: 100%;
+  height: 100%;
+  /* padding: 30px 20px; */
+  display: flex;
+}
+#textbox {
+  min-width: 320px;
+  max-width: 320px;
+  flex-basis: 320px;
+  height: 100%;
+  margin: 0 80px 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#btnbox {
+  width: 100%;
+  height: 80px;
+}
+
+#datatab {
+  width: 100%;
+  padding: 10px 0px;
+}
+
+#canvas {
+  height: 100%;
+  flex: 1;
+}
+
+/* ============ 텍스트  ================*/
+h3 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #ffffff;
+  margin: 10px 0 60px 0;
+  font-weight: 700;
+}
+
+.datatablTitle {
+  font-size: 1.2rem;
+  color: #f4d037;
+  margin: 0px 0px 20px 0px;
+  font-weight: 700;
+  width: 100%;
+  line-height: 2rem;
+  border-bottom: 3px solid #f4d037;
+}
+.legend {
+  text-align: right;
+  white-space: nowrap;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
+.articletext {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  font-weight: 350;
+  color: #aaaaaa;
+  margin-bottom: 30px;
+}
+.legendtext {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 350;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+}
+
+/* ============ 버튼   ================*/
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  float: left;
+  width: 100px;
+  padding: 6px 0;
+  text-align: center;
+  background-color: #4d4d4f;
+  font-size: 0.9rem;
+  height: 22px;
+  color: #fff;
+  line-height: 1.5rem;
+  margin: 0px 2px 10px 2px;
+  display: block;
+}
+
+input[type="radio"] + label:hover {
+  background-color: #af9838;
+  color: #ffffff;
+}
+
+input[type="radio"].btnA:checked + label {
+  background-color: #f4d037;
+  color: #ffffff;
+}
+
+/* ========= 테이블 ============*/
+table {
+  border-collapse: collapse;
+}
+
+.databox th {
+  color: #aaaaaa;
+  height: 30px;
+  width: 80px;
+  text-align: left;
+  padding-left: 5px;
+  vertical-align: top;
+}
+
+.databox td {
+  padding: 0px;
+  height: 30px;
+  text-align: left;
+  padding-left: 5px;
+  color: #333;
+  vertical-align: top;
+}
+
+.databox td.areaname {
+  width: 240px;
+  color: #fff;
+}
+#fourthtext {
+  flex: 1;
+  margin-bottom: 30px;
+  margin-top: -5px;
+  overflow-y: scroll;
+  color: #fff;
+  width: 100%;
+  padding-left: 5px;
+}
+#fourthtext > a {
+  height: 1.8rem;
+  line-height: 1.8rem;
+  width: 100%;
+  border-bottom: 1px solid #4d4d4f;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#fourthtext > a:hover {
+  background-color: #4d4d4f;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #f4d037;
+}
+
+/* 로딩 */
+#loader {
+  position: absolute;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.loader7 {
+  width: 80px;
+  height: 80px;
+  margin: 30px;
+}
+
+.loader7:before,
+.loader7:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid #f4d037;
+}
+.loader7:before {
+  animation: loader7 2s linear infinite 0s;
+}
+.loader7:after {
+  animation: loader7 2s linear infinite 1s;
+}
+
+@keyframes loader7 {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+.loadertext {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: #cccccc;
+}
+
+.rangeslider {
+  margin: 60px auto 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  height: 80px;
+}
+#yeartext {
+  color: #f4d037;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#slider1 {
+  width: 100%;
+}
+#slider {
+  width: 100%;
+  height: calc(100% - 120px);
+}
+
+.link {
+  cursor: pointer;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.nodelabel {
+  cursor: pointer;
+}
+
+.active {
+  fill: red;
+}
+.ui-slider-handle.ui-state-default.ui-corner-all {
+  outline: none;
+}

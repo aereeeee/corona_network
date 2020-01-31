@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript">
+      if (isMobile()) {
+        window.location.href = "../mobile/index.html";
+      }
+      function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+      }
+    </script>
+    <title>SBS마부작침 : 코로나 바이러스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="mabu.jpg" />
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="web/style.css" />
+    <link rel="stylesheet" href="../js/jquery-ui.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="textbox">
+        <div class="flextop">
+          <div class="title">
+            <a
+              href="http://news.sbs.co.kr/news/newsPlusList.do?themeId=10000000114"
+              target="_blank"
+            >
+              <img src="mabulogo.png" alt="" id="mabulogo" />
+            </a>
+            <h3>신종 코로나 바이러스 <br />확산 관계망</h3>
+          </div>
+          <div id="btnbox">
+            <input
+              type="radio"
+              name="btnA"
+              value="start"
+              id="start"
+              class="btnA"
+              checked
+            /><label for="start">▶</label>
+            <input
+              type="radio"
+              name="btnA"
+              value="stop"
+              id="stop"
+              class="btnA"
+            /><label for="stop"> ||</label>
+            <input
+              type="radio"
+              name="btnA"
+              value="total"
+              id="total"
+              class="btnA"
+            /><label for="total">전체 보기</label>
+          </div>
+          <!-- <div class="articletext">
+            [ 보는 방법 ]<br />
+            1. 전체보기 버튼을 누르면 네트워크가 나타납니다. <br />
+            2. 슬라이더를 움직이면 연도가 변합니다.<br />
+            3. 관계선을 클릭하면 세부정보와 관련기사를 볼 수 있습니다.<br />
+            4. 네트워크를 드래그해서 움직여보세요.
+          </div> -->
+          <div id="datatab">
+            <p class="datatablTitle" id="datatablTitle">
+              인물 혹은 연결선을 클릭하세요
+            </p>
+            <table class="databox">
+              <tr>
+                <th id="firsthead"></th>
+                <td class="areaname" id="firsttext"></td>
+              </tr>
+              <tr>
+                <th id="secondhead"></th>
+                <td class="areaname" id="secondtext"></td>
+              </tr>
+              <tr>
+                <th id="thirdhead"></th>
+                <td class="areaname" id="thirdtext"></td>
+              </tr>
+              <tr>
+                <th id="fourthhead"></th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="fourthtext"></div>
+      </div>
+      <div id="canvas">
+        <div class="rangeslider">
+          <p id="yeartext"></p>
+          <div id="slider1"></div>
+        </div>
+        <div id="slider"></div>
+      </div>
+      <div class="legend">
+        <p class="legendtext">
+          <span style="color:#ff4848;">■</span> 1차 감염<br />
+          <span style="color:#1adbe5;">■</span> 2차 감염<br />
+          <span style="color:#efd952;">■</span> 3차 감염<br />
+        </p>
+        <p class="legendtext"><strong>업데이트</strong> : 2020.01.31</p>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        (function(i, s, o, g, r, a, m) {
+          i["GoogleAnalyticsObject"] = r;
+          (i[r] =
+            i[r] ||
+            function() {
+              (i[r].q = i[r].q || []).push(arguments);
+            }),
+            (i[r].l = 1 * new Date());
+          (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m);
+        })(
+          window,
+          document,
+          "script",
+          "//www.google-analytics.com/analytics.js",
+          "ga"
+        );
+        ga("create", "UA-53828044-1", "auto");
+        ga("require", "displayfeatures");
+        ga("send", "pageview");
+      });
+      $("#loader").hide();
+    </script>
+    <script src="web/network.js"></script>
+  </body>
+</html>
