@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   background: #2b292d;
+  -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
   display: none;

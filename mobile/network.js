@@ -52,7 +52,7 @@ $(document).ready(function() {
       max: +format(new Date()),
       value: +format(new Date("2020-01-20")),
       change: function(event, ui) {
-        $("#yeartext").text(`2020년 ${textformat(parseDay(`${ui.value}`))}`);
+        $("#yeartext").text("2020년 " + textformat(parseDay("" + ui.value)));
         svg.selectAll(".link").style("stroke-width", function(d) {
           if (format(new Date(d.value)) - 1 < ui.value) {
             return "4px";
