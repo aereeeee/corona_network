@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $(".articlemenu").click(function() {
+    $(".articletext").toggle(200);
+  });
+
   var width = $(".canvas").width(),
     height = $(".canvas").height();
 

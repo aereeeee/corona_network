@@ -183,13 +183,26 @@ h5 {
   border-bottom: 2px solid #f4d037;
   width: 100%;
 }
-
+.articlemenu {
+  color: #fff;
+  width: 100%;
+  height: 40px;
+  font-size: 0.9rem;
+  line-height: 40px;
+  text-align: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.articlemenu span {
+  font-size: 1.5rem;
+}
 .articletext {
   font-size: 0.8rem;
   line-height: 1.3rem;
   font-weight: 350;
   color: #aaaaaa;
   margin: 20px 0;
+  display: none;
 }
 .articletext span {
   font-size: 0.7rem;
