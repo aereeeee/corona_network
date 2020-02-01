@@ -129,19 +129,40 @@ $(document).ready(function() {
       simulation.nodes(graph.nodes).on("tick", ticked);
       simulation.force("link").links(graph.links);
 
+      function marker(color) {
+        svg
+          .append("svg:marker")
+          .attr("id", color.replace("#", ""))
+          .attr("viewBox", "0 -5 10 10")
+          .attr("refX", 15)
+          .attr("refY", 0)
+          .attr("markerWidth", 5)
+          .attr("markerHeight", 5)
+          .attr("orient", "auto")
+          .attr("xoverflow", "visible")
+          .append("svg:path")
+          .attr("d", "M0,-5L10,0L0,5")
+          .style("fill", color);
+
+        return "url(" + color + ")";
+      }
+
       var link = svg
         .selectAll(".link")
         .data(graph.links)
         .enter()
         .append("line")
         .attr("class", "link")
+        .each(function(d) {
+          d3.select(this).attr("marker-end", marker(color(d.group)));
+        })
         .style("stroke", function(d) {
           return color(d.group);
         })
         .style("opacity", 0.3)
         .on("mouseover", function(d) {
           d3.select(this)
-            .style("stroke-width", "8px")
+            .style("stroke-width", "6px")
             .style("opacity", 0.7);
         })
         .on("mouseout", function(d) {
@@ -197,7 +218,7 @@ $(document).ready(function() {
         })
         .style("font-size", function(d) {
           if (d.name == "우한") {
-            return "1.2em;";
+            return "0";
           } else {
             return "1.2em";
           }
@@ -209,7 +230,7 @@ $(document).ready(function() {
         .attr("margin", "3px")
         .style("font-weight", function(d) {
           if (d.name == "우한") {
-            return 700;
+            return 0;
           } else {
             return 700;
           }
@@ -256,6 +277,18 @@ $(document).ready(function() {
             toggle = 0;
           }
         });
+      var defs = svg.append("svg:defs");
+      defs
+        .append("pattern")
+        .attr("id", "china")
+        .attr("width", 1)
+        .attr("height", 1)
+        .append("svg:image")
+        .attr("xlink:href", "../china.png")
+        .attr("width", 60)
+        .attr("height", 60)
+        .attr("y", -15)
+        .attr("x", -15);
 
       var node = svg
         .selectAll(".node")
@@ -267,17 +300,21 @@ $(document).ready(function() {
         })
         .attr("r", function(d) {
           if (d.name == "우한") {
-            return 12;
+            return 15;
           } else {
             return 12;
           }
         })
         .style("fill", function(d) {
-          return color(d.group);
+          if (d.name == "우한") {
+            return "url(#china)";
+          } else {
+            return color(d.group);
+          }
         })
         .style("stroke-width", function(d) {
           if (d.name == "우한") {
-            return "4px";
+            return "2px";
           } else {
             return "4px";
           }

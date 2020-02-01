@@ -187,9 +187,18 @@ h5,
 
 .articletext {
   font-size: 0.8rem;
-  line-height: 1.1em;
+  line-height: 1.3rem;
   font-weight: 350;
-  color: #999999;
+  color: #aaaaaa;
+  margin: 20px 0;
+}
+.articletext span {
+  font-size: 0.7rem;
+  font-weight: bold;
+  width: 20px;
+  background-color: #4d4d4f;
+  display: inline-block;
+  text-align: center;
 }
 .legendtext {
   font-size: 0.8rem;

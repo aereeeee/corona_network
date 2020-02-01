@@ -12,9 +12,17 @@
         );
       }
     </script>
-    <title>SBS마부작침 : 코로나 바이러스</title>
+    <title>신종 코로나 감염자 한눈에 보기</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="../mabu.jpg" />
+    <meta property="og:image" content="../thumb.png" />
+    <meta
+      property="og:title"
+      content="[마부작침] 신종 코로나 감염자 한눈에 보기"
+    />
+    <meta
+      property="og:description"
+      content="신종 코로나바이러스 감염자 현황 인터랙티브 페이지"
+    />
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-ui.js"></script>
@@ -32,7 +40,7 @@
             >
               <img src="../mabulogo.png" alt="" id="mabulogo" />
             </a>
-            <h3>신종 코로나 바이러스 <br />확산 관계망</h3>
+            <h3>신종 코로나 감염자<br />한눈에 보기</h3>
           </div>
           <div id="btnbox">
             <input
@@ -58,13 +66,16 @@
               class="btnA"
             /><label for="total">전체 보기</label>
           </div>
-          <!-- <div class="articletext">
-            [ 보는 방법 ]<br />
-            1. 전체보기 버튼을 누르면 네트워크가 나타납니다. <br />
-            2. 슬라이더를 움직이면 연도가 변합니다.<br />
-            3. 관계선을 클릭하면 세부정보와 관련기사를 볼 수 있습니다.<br />
-            4. 네트워크를 드래그해서 움직여보세요.
-          </div> -->
+          <div class="articletext">
+            [한눈에 보기 사용법] <br />
+            1. <span>▶</span> 버튼을 누르면 일자별 자동 재생이 됩니다 <br />
+            2. <span>||</span> 버튼을 눌러 특정 시점 현황을 볼 수 있습니다
+            <br />
+            3. 전체보기 버튼을 누르면 신종 코로나 감염자 관계망이 나타납니다<br />
+            4. 슬라이더를 움직여 일자별로 확인할 수 있습니다<br />
+            5. 감염자(노드)와 관계선을 클릭하면 세부정보 및 관련기사를 볼 수
+            있습니다
+          </div>
           <div id="datatab">
             <p class="datatablTitle" id="datatablTitle">
               인물 혹은 연결선을 클릭하세요
