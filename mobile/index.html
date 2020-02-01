@@ -15,7 +15,7 @@
           return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
       }
     </script>
-    <meta property="og:image" content="../thumb.png" />
+    <meta property="og:image" content="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/thumb.png" />
     <meta property="og:title" content="[마부작침] 신종 코로나 감염자 한눈에 보기" />
     <meta property="og:description" content="신종 코로나바이러스 감염자 현황 인터랙티브 페이지" />
     <script src="https://d3js.org/d3.v4.js"></script>
@@ -73,7 +73,14 @@
       </div>
       <div id="textbox">
         <h5 id="datatablTitle">인물 혹은 관계선을 터치하세요</h5>
-        <table>
+        <table class="databox-link">
+          <tr>
+            <th id="firsthead-link"></th>
+            <td class="areaname" id="firsttext-link"></td>
+          </tr>
+        </table>
+
+        <table class="databox">
           <tr>
             <th id="firsthead"></th>
             <td class="areaname" id="firsttext"></td>
@@ -86,9 +93,36 @@
             <th id="thirdhead"></th>
             <td class="areaname" id="thirdtext"></td>
           </tr>
+          <tr>
+            <th id="fourthhead"></th>
+            <td class="areaname" id="fourthtext"></td>
+          </tr>
+          <tr>
+            <th id="fivehead"></th>
+            <td class="areaname" id="fivetext"></td>
+          </tr>
+          <tr>
+            <th id="sixhead"></th>
+            <td class="areaname" id="sixtext"></td>
+          </tr>
+          <tr>
+            <th id="sevenhead"></th>
+            <td class="areaname" id="seventext"></td>
+          </tr>
+          <tr>
+            <th id="eighthead"></th>
+            <td class="areaname" id="eighttext"></td>
+          </tr>
+          <tr>
+            <th id="ninehead"></th>
+            <td class="areaname" id="ninetext"></td>
+          </tr>
+          <tr>
+            <th id="tenhead"></th>
+            <td class="areaname" id="tentext"></td>
+          </tr>
         </table>
-        <div id="fourthhead"></div>
-        <div id="fourthtext"></div>
+        <div id="articles"></div>
         <div class="legendtext">
           <span style="color:#ff4848;">■</span> 1차 감염
           <span style="color:#1adbe5;">■</span> 2차 감염
@@ -105,9 +139,7 @@
       <div id="footerbar">
         <img src="../mabulogo.png" alt="" id="mabulogo" />
         <p id="credit">
-          <strong>SBS데이터저널리즘팀 '마부작침'</strong><br />권지윤 기자
-          (legend8169@sbs.co.kr)<br />박원경 기자 (seagull@sbs.co.kr)<br />분석:
-          한창진·장동호 | 디자인/개발: 임송이
+          <strong>SBS데이터저널리즘팀 '마부작침'</strong><br />심영구 기자 (so5what@sbs.co.kr)<br />배여운 기자 | 정혜경 기자 | 디자인/개발 : 조애리
         </p>
       </div>
     </a>

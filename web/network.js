@@ -172,22 +172,20 @@ $(document).ready(function() {
         })
         .on("click", function(d) {
           $("#hidelink").show();
-          d3.select("#fourthtext")
+
+          d3.select("#articles")
             .selectAll("a")
             .remove();
+
+          d3.select(".databox-link").style("display", "block");
+          d3.select(".databox").style("display", "none");
 
           d3.select("#datatablTitle").text(
             d.source.name + " - " + d.target.name
           );
-          d3.select("#firsthead").text("인물설명");
-          d3.select("#secondhead").text("연결시점");
-          d3.select("#thirdhead").text("관계");
-          d3.select("#fourthhead").text("관련 기사");
 
-          d3.select("#firsttext").text(d.source.name + " - " + d.target.name);
-          d3.select("#secondtext").text(d.value);
-          d3.select("#thirdtext").text(d.connect);
-          d3.select("#fourthtext")
+          d3.select("#firsthead-link").text("관련 기사");
+          d3.select("#articles")
             .selectAll("a")
             .data(d.sbsarticle)
             .enter()
@@ -199,6 +197,7 @@ $(document).ready(function() {
               return d.title;
             });
         })
+
         .call(
           d3
             .drag()
@@ -217,10 +216,10 @@ $(document).ready(function() {
           return d.name;
         })
         .style("font-size", function(d) {
-          if (d.name == "우한") {
+          if (d.number === 0) {
             return "0";
           } else {
-            return "1.2em";
+            return "1rem";
           }
         })
         .style("fill", function(d) {
@@ -229,7 +228,7 @@ $(document).ready(function() {
         .style("opacity", 0.8)
         .attr("margin", "3px")
         .style("font-weight", function(d) {
-          if (d.name == "우한") {
+          if (d.number === 0) {
             return 0;
           } else {
             return 700;
@@ -237,31 +236,9 @@ $(document).ready(function() {
         })
         .on("click", function(d) {
           $("#hidelink").hide();
-          d3.select("#fourthtext")
-            .selectAll("a")
-            .remove();
 
           d3.select("#datatablTitle").text(d.name);
-
-          d3.select("#firsthead").text("프로필");
-          d3.select("#secondhead").text("확진일");
-          d3.select("#thirdhead").text("현재 상태");
-          d3.select("#fourthhead").text("관련 기사");
-
-          d3.select("#firsttext").text(d.connect);
-          d3.select("#secondtext").text(d.value);
-          d3.select("#thirdtext").text(d.status);
-          d3.select("#fourthtext")
-            .selectAll("a")
-            .data(d.sbsarticle)
-            .enter()
-            .append("a")
-            .attr("href", function(d) {
-              return d.link;
-            })
-            .text(function(d) {
-              return d.title;
-            });
+          makeTabe(d);
 
           if (toggle == 0) {
             d = d3.select(this).node().__data__;
@@ -284,11 +261,11 @@ $(document).ready(function() {
         .attr("width", 1)
         .attr("height", 1)
         .append("svg:image")
-        .attr("xlink:href", "../china.png")
-        .attr("width", 60)
-        .attr("height", 60)
-        .attr("y", -15)
-        .attr("x", -15);
+        .attr("xlink:href", "../virus.png")
+        .attr("width", 40)
+        .attr("height", 40)
+        .attr("y", 0)
+        .attr("x", 0);
 
       var node = svg
         .selectAll(".node")
@@ -299,54 +276,32 @@ $(document).ready(function() {
           return "node" + " " + d.number;
         })
         .attr("r", function(d) {
-          if (d.name == "우한") {
-            return 15;
+          if (d.number === 0) {
+            return 20;
           } else {
             return 12;
           }
         })
         .style("fill", function(d) {
-          if (d.name == "우한") {
+          if (d.number === 0) {
             return "url(#china)";
           } else {
             return color(d.group);
           }
         })
         .style("stroke-width", function(d) {
-          if (d.name == "우한") {
-            return "2px";
+          if (d.number === 0) {
+            return "0px";
           } else {
-            return "4px";
+            return "3px";
           }
         })
         .style("stroke", "#ffffff")
         .on("click", function(d) {
           $("#hidelink").hide();
-
           d3.select("#datatablTitle").text(d.name);
-          d3.select("#fourthtext")
-            .selectAll("a")
-            .remove();
+          makeTabe(d);
 
-          d3.select("#firsthead").text("프로필");
-          d3.select("#secondhead").text("확진일");
-          d3.select("#thirdhead").text("현재 상태");
-          d3.select("#fourthhead").text("관련 기사");
-
-          d3.select("#firsttext").text(d.connect);
-          d3.select("#secondtext").text(d.value);
-          d3.select("#thirdtext").text(d.status);
-          d3.select("#fourthtext")
-            .selectAll("a")
-            .data(d.sbsarticle)
-            .enter()
-            .append("a")
-            .attr("href", function(d) {
-              return d.link;
-            })
-            .text(function(d) {
-              return d.title;
-            });
           if (toggle == 0) {
             d = d3.select(this).node().__data__;
 
@@ -390,14 +345,14 @@ $(document).ready(function() {
         });
         nodetext
           .attr("x", function(d) {
-            if (d.name == "우한") {
+            if (d.number === 0) {
               return d.x - 20;
             } else {
               return d.x - 20;
             }
           })
           .attr("y", function(d) {
-            if (d.name == "우한") {
+            if (d.number === 0) {
               return d.y + 10;
             } else {
               return d.y - 10;
@@ -425,3 +380,37 @@ $(document).ready(function() {
     }
   });
 });
+
+function makeTabe(d) {
+  d3.select("#articles")
+    .selectAll("a")
+    .remove();
+  if (d.number == 0) {
+    d3.select(".databox").style("display", "none");
+    d3.select(".databox-link").style("display", "none");
+  } else {
+    d3.select(".databox-link").style("display", "none");
+    d3.select(".databox").style("display", "block");
+    d3.select("#firsthead").text("확진날짜");
+    d3.select("#secondhead").text("감염 차수");
+    d3.select("#thirdhead").text("현재 상태");
+    d3.select("#fourthhead").text("치료병원");
+    d3.select("#fivehead").text("국적");
+    d3.select("#sixhead").text("성별");
+    d3.select("#sevenhead").text("우한 방문 여부");
+    d3.select("#eighthead").text("나이");
+    d3.select("#ninehead").text("발견경로");
+    d3.select("#tenhead").text("접촉자");
+
+    d3.select("#firsttext").text(d.value);
+    d3.select("#secondtext").text(d.connect);
+    d3.select("#thirdtext").text(d.status);
+    d3.select("#fourthtext").text(d.hospital);
+    d3.select("#fivetext").text(d.country);
+    d3.select("#sixtext").text(d.gender);
+    d3.select("#seventext").text(d.visit);
+    d3.select("#eighttext").text(d.age);
+    d3.select("#ninetext").text(d.check);
+    d3.select("#tentext").text(d.contact);
+  }
+}

@@ -14,7 +14,10 @@
     </script>
     <title>신종 코로나 감염자 한눈에 보기</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="../thumb.png" />
+    <meta
+      property="og:image"
+      content="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/thumb.png"
+    />
     <meta
       property="og:title"
       content="[마부작침] 신종 코로나 감염자 한눈에 보기"
@@ -80,6 +83,13 @@
             <p class="datatablTitle" id="datatablTitle">
               인물 혹은 연결선을 클릭하세요
             </p>
+            <table class="databox-link">
+              <tr>
+                <th id="firsthead-link"></th>
+                <td class="areaname" id="firsttext-link"></td>
+              </tr>
+            </table>
+
             <table class="databox">
               <tr>
                 <th id="firsthead"></th>
@@ -95,11 +105,36 @@
               </tr>
               <tr>
                 <th id="fourthhead"></th>
+                <td class="areaname" id="fourthtext"></td>
+              </tr>
+              <tr>
+                <th id="fivehead"></th>
+                <td class="areaname" id="fivetext"></td>
+              </tr>
+              <tr>
+                <th id="sixhead"></th>
+                <td class="areaname" id="sixtext"></td>
+              </tr>
+              <tr>
+                <th id="sevenhead"></th>
+                <td class="areaname" id="seventext"></td>
+              </tr>
+              <tr>
+                <th id="eighthead"></th>
+                <td class="areaname" id="eighttext"></td>
+              </tr>
+              <tr>
+                <th id="ninehead"></th>
+                <td class="areaname" id="ninetext"></td>
+              </tr>
+              <tr>
+                <th id="tenhead"></th>
+                <td class="areaname" id="tentext"></td>
               </tr>
             </table>
           </div>
         </div>
-        <div id="fourthtext"></div>
+        <div id="articles"></div>
       </div>
       <div id="canvas">
         <div class="rangeslider">
@@ -116,6 +151,10 @@
         </p>
         <p class="legendtext">
           <strong>최종 업데이트 </strong><span class="update"></span>
+        </p>
+        <p class="legendtext" id="credit">
+          <strong>SBS데이터저널리즘팀 '마부작침'</strong><br />심영구 기자
+          (so5what@sbs.co.kr) | 배여운 기자 | 정혜경 기자 | 디자인/개발 : 조애리
         </p>
       </div>
     </div>

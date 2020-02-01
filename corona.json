@@ -1,166 +1,198 @@
 {
-  "update": "2020-02-01 14:31:00",
+  "update": "2020-02-01 18:06:00",
   "nodes": [
     {
       "group": "A",
       "number": 0,
       "value": "2020-01-20",
-      "name": "우한",
+      "name": "신종 코로나 바이러스",
       "connect": "",
       "status": "",
-      "sbsarticle": [
-        {
-          "link": "www.sbs.com",
-          "title": "우한폐렴 확산, 역대 최고 빠르다…213명 사망·환자 1만 육박"
-        },
-        {
-          "link": "www.sbs.com",
-          "title": "[단독]우한 탈출 교민 사람 마주칠까 무서워…공항 검역 3차례"
-        },
-        { "link": "www.sbs.com", "title": "뉴스2" },
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" },
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" },
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" },
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "hospital": "",
+      "country": "",
+      "gender": "",
+      "visit": "",
+      "age": ""
     },
     {
       "group": "A",
       "number": 1,
       "value": "2020-01-20",
-      "name": "1번",
+      "name": "1번 환자",
       "connect": "1차 감염",
-      "status": "폐렴",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "양호",
+      "hospital": "인천의료원",
+      "country": "중국",
+      "gender": "여성",
+      "visit": "있음",
+      "age": "35세",
+      "check": "검역(의사환자)",
+      "contact": "45명"
     },
     {
       "group": "A",
       "number": 2,
-      "name": "2번",
+      "name": "2번 환자",
       "value": "2020-01-24",
       "connect": "1차 감염",
-      "status": "치료중",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "양호",
+      "hospital": "국립중앙의료원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "있음",
+      "age": "55세",
+      "check": "검역(능동감시)",
+      "contact": "75명"
     },
     {
       "group": "A",
-      "name": "3번",
+      "name": "3번 환자",
       "number": 3,
       "value": "2020-01-26",
       "connect": "1차 감염",
-      "status": "치료중",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "양호",
+      "hospital": "명지병원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "있음",
+      "age": "54세",
+      "check": "자가신고",
+      "contact": "95명"
     },
     {
       "group": "A",
-      "name": "4번",
+      "name": "4번 환자",
       "number": 4,
       "value": "2020-01-27",
       "connect": "1차 감염",
-      "status": "폐렴",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "경증 폐렴",
+      "hospital": "분당서울대병원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "있음",
+      "age": "55세",
+      "check": "의료기관 신고",
+      "contact": "172명"
     },
     {
       "group": "A",
-      "name": "5번",
+      "name": "5번 환자",
       "number": 5,
       "value": "2020-01-30",
       "connect": "1차 감염",
-      "status": "치료중",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "양호",
+      "hospital": "서울의료원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "있음",
+      "age": "33세",
+      "check": "검역(능동감시)",
+      "contact": "29명"
     },
     {
       "group": "B",
-      "name": "6번",
+      "name": "6번 환자",
       "number": 6,
       "value": "2020-01-30",
       "connect": "2차 감염",
-      "status": "치료중",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "양호",
+      "hospital": "서울대병원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "없음",
+      "age": "55세",
+      "check": "검역(능동감시)",
+      "contact": "25명"
     },
     {
       "group": "A",
-      "name": "7번",
+      "name": "7번 환자",
       "number": 7,
       "value": "2020-01-30",
       "connect": "1차 감염",
-      "status": "치료중",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "양호",
+      "hospital": "서울의료원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "있음",
+      "age": "28세",
+      "check": "자가신고",
+      "contact": "21명"
     },
     {
       "group": "A",
-      "name": "8번",
+      "name": "8번 환자",
       "number": 8,
       "value": "2020-01-31",
       "connect": "1차 감염",
-      "status": "치료중",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "양호",
+      "hospital": "원광대병원(익산)",
+      "country": "대한민국",
+      "gender": "여성",
+      "visit": "있음",
+      "age": "62세",
+      "check": "미확인",
+      "contact": "확인중"
     },
     {
-      "group": "C",
-      "name": "9번",
+      "group": "B",
+      "name": "9번 환자",
       "number": 9,
       "value": "2020-01-31",
-      "connect": "3차 감염",
-      "status": "NA",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "connect": "2차 감염",
+      "status": "미발표",
+      "hospital": "서울의료원",
+      "country": "대한민국",
+      "gender": "여성",
+      "visit": "없음",
+      "age": "28세",
+      "check": "검역(능동감시)",
+      "contact": "확인중"
     },
     {
       "group": "C",
-      "name": "10번",
+      "name": "10번 환자",
       "number": 10,
       "value": "2020-01-31",
       "connect": "3차 감염",
-      "status": "NA",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
+      "status": "미발표",
+      "hospital": "서울대병원",
+      "country": "대한민국",
+      "gender": "여성",
+      "visit": "없음",
+      "age": "52세",
+      "check": "검역(능동감시)",
+      "contact": "확인중"
+    },
+    {
+      "group": "C",
+      "name": "11번 환자",
+      "number": 11,
+      "value": "2020-01-31",
+      "connect": "3차 감염",
+      "status": "미발표",
+      "hospital": "서울대병원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "없음",
+      "age": "25세",
+      "check": "검역(능동감시)",
+      "contact": "확인중"
+    },
+    {
+      "group": "A",
+      "name": "12번 환자",
+      "number": 12,
+      "value": "2020-02-01",
+      "connect": "1차 감염",
+      "status": "미발표",
+      "hospital": "분당서울대병원",
+      "country": "중국",
+      "gender": "남성",
+      "visit": "없음",
+      "age": "49세",
+      "check": "검역(능동감시)",
+      "contact": "확인중"
     }
   ],
   "links": [
@@ -173,9 +205,22 @@
       "value": "2020-01-20",
       "connect": "1차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005596307&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "'중국 폐렴', 증상자 국내 첫 발생.. 격리 치료 중"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005596338&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "사스 검사 진행 중…'메르스 때처럼 퍼지나' 걱정 확산"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005598055&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "'중국 폐렴, 신종 코로나바이러스'…국내 증상자 호전"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005612722&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "''우한 코로나' 국내 첫 확진.. 감염경보 '주의'로 상향"
+        }
       ]
     },
     {
@@ -187,9 +232,14 @@
       "value": "2020-01-24",
       "connect": "1차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005618935&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "국내 두 번째 확진 환자..우한서 일하던 55세 한국인"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005619638&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "두 번째 확진자 '안정적'.. 확산 방지 총력"
+        }
       ]
     },
     {
@@ -201,9 +251,18 @@
       "value": "2020-01-26",
       "connect": "1차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005620329&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "'우한 코로나' 3번째 확진자, 수일간 수도권 돌아다녔다"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005621280&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "우한 코로나 3번째 확진자, 일산 · 강남 · 한강 다 누볐다"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005626737&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "3번째 환자, 엿새간 강남 · 일산 오가며 95명 접촉"
+        }
       ]
     },
     {
@@ -215,9 +274,14 @@
       "value": "2020-01-27",
       "connect": "1차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005621279&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "4번째 확진자도 '무증상 입국'…방문 지역 · 접촉자 조사"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005622852&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "'4번째 환자', 172명 접촉.. 거쳐간 곳 방역 비상"
+        }
       ]
     },
     {
@@ -229,9 +293,14 @@
       "value": "2020-01-30",
       "connect": "1차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005629073&plink=SEARCH&cooper=SBSNEWSSEARCH",
+          "title": "'확진자 방문' CGV 영업 중단…같은 영화 본 관객들은?"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005626735&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "추가 확진 2명…그중 1명은 '2차 감염'…국내 첫 발생"
+        }
       ]
     },
     {
@@ -243,9 +312,10 @@
       "value": "2020-01-30",
       "connect": "1차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005628601&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "'확진 5명 추가' 현재까지 총 11명…3차 감염 첫 발생"
+        }
       ]
     },
     {
@@ -257,9 +327,14 @@
       "value": "2020-01-31",
       "connect": "1차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005628601&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "'확진 5명 추가' 현재까지 총 11명…3차 감염 첫 발생"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005628603&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "8번 환자, 1차 검사에선 '음성'…마트 · 식당 들렀었다"
+        }
       ]
     },
     {
@@ -271,37 +346,82 @@
       "value": "2020-01-30",
       "connect": "2차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005626735&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "추가 확진 2명…그중 1명은 '2차 감염'…국내 첫 발생"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005626738&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "함께 식사했는데, 밀접 아닌 '일상 접촉'…감염 우려 ↑"
+        }
       ]
     },
     {
       "group": "C",
       "start": "6번",
       "source": 6,
-      "end": "9번",
-      "target": 9,
-      "value": "2020-01-31",
-      "connect": "3차 감염",
-      "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
-      ]
-    },
-    {
-      "group": "C",
-      "start": "6번",
-      "source": 6,
-      "end": "10번",
+      "end": "19번",
       "target": 10,
       "value": "2020-01-31",
       "connect": "3차 감염",
       "sbsarticle": [
-        { "link": "www.sbs.com", "title": "뉴스" },
-        { "link": "www.sbs.com", "title": "뉴스1" },
-        { "link": "www.sbs.com", "title": "뉴스2" }
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005628605&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "6번 환자 가족, 3차 감염자 격리 치료 중…상태 양호"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005628602&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "3번 환자→6번 환자→아내·아들…'밀접 접촉'으로 전파"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "start": "6번",
+      "source": 6,
+      "end": "11번",
+      "target": 11,
+      "value": "2020-01-31",
+      "connect": "3차 감염",
+      "sbsarticle": [
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005628605&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "6번 환자 가족, 3차 감염자 격리 치료 중…상태 양호"
+        },
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005628602&plink=THUMB&cooper=SBSNEWSPROGRAM",
+          "title": "3번 환자→6번 환자→아내·아들…'밀접 접촉'으로 전파"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "start": "5번",
+      "source": 5,
+      "end": "9번",
+      "target": 9,
+      "value": "2020-01-31",
+      "connect": "2차 감염",
+      "sbsarticle": [
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005629290",
+          "title": "'신종코로나' 국내 확진자 12명·70명 검사 중…동선 공개"
+        }
+      ]
+    },
+    {
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "12번",
+      "target": 12,
+      "value": "2020-02-01",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005629164&oaid=N1005629290&plink=POP&cooper=SBSNEWSEND",
+          "title": "'신종 코로나' 국내 12번째 환자…일본 환자 접촉 49세 중국 남성"
+        }
       ]
     }
   ]

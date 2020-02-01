@@ -25,7 +25,6 @@ body {
 #mabulogo {
   width: 80px;
 }
-
 /* ============ 영역 ================*/
 #wrapper {
   width: 100%;
@@ -141,16 +140,18 @@ table {
   border-collapse: collapse;
 }
 
-.databox th {
+.databox th,
+.databox-link th {
   color: #aaaaaa;
   height: 30px;
-  width: 80px;
+  min-width: 120px;
   text-align: left;
   padding-left: 5px;
   vertical-align: top;
 }
 
-.databox td {
+.databox td,
+.databox-link td {
   padding: 0px;
   height: 30px;
   text-align: left;
@@ -159,11 +160,11 @@ table {
   vertical-align: top;
 }
 
-.databox td.areaname {
-  width: 240px;
+.databox td.areaname,
+.databox-link td.areaname {
   color: #fff;
 }
-#fourthtext {
+#articles {
   flex: 1;
   margin-bottom: 30px;
   margin-top: -5px;
@@ -173,7 +174,7 @@ table {
   padding-left: 5px;
   -ms-overflow-style: none;
 }
-#fourthtext > a {
+#articles > a {
   height: 40px;
   line-height: 40px;
   width: 100%;
@@ -187,10 +188,12 @@ table {
   overflow: hidden;
   white-space: nowrap;
 }
-#fourthtext > a:hover {
+#articles > a:hover {
   background-color: #4d4d4f;
 }
-
+.databox-link {
+  display: none;
+}
 ::-webkit-scrollbar {
   width: 3px;
 }
