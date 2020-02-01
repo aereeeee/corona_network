@@ -44,6 +44,7 @@ $(document).ready(function() {
     .attr("height", height);
 
   d3.json("../corona.json", function(error, graph) {
+    $(".update").html(graph.update);
     $(".ui-slider-handle").draggable();
     updateNodes();
     $("#slider1").slider({
