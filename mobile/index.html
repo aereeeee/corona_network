@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>신종 코로나 감염자 한눈에 보기</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport"
+  content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, target-densityDpi=device-dpi">
     <script type="text/javascript">
       if (!isMobile()) {
           window.location.href = "../web/index.html";
@@ -15,13 +13,14 @@
           return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
       }
     </script>
-    <meta property="og:image" content="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/thumb.png" />
+    <meta property="og:image" content="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/thumb1.png" />
     <meta property="og:title" content="[마부작침] 신종 코로나 감염자 한눈에 보기" />
     <meta property="og:description" content="신종 코로나바이러스 감염자 현황 인터랙티브 페이지" />
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../js/jquery-ui.css" />
   </head>
@@ -63,13 +62,13 @@
       </div>
       <div class="articlemenu">한눈에 보기 사용법 <span>&#8964;</span></div>
       <div class="articletext">
-        1. <span>▶</span> 버튼을 누르면 일자별 자동 재생이 됩니다 <br />
-        2. <span>||</span> 버튼을 눌러 특정 시점 현황을 볼 수 있습니다
-        <br />
-        3. 전체보기 버튼을 누르면 감염자 관계망이 나타납니다<br />
-        4. 슬라이더를 움직여 일자별로 확인할 수 있습니다<br />
-        5. 감염자(노드)와 관계선을 클릭하면 세부정보 및 관련기사를 볼 수
-        있습니다
+        <ol>
+          <li><strong class="yellowText">감염자(노드)</strong>와 <strong class="yellowText">관계선</strong>을 클릭하면 세부정보 및 관련기사를 볼 수
+            있습니다</li>
+          <li>전체보기 버튼을 누르면 신종 코로나 감염자 관계망이 나타납니다</li>
+          <li>슬라이더를 움직여 일자별로 확인할 수 있습니다</li>
+
+        </ol> 
       </div>
       <div id="textbox">
         <h5 id="datatablTitle">인물 혹은 관계선을 터치하세요</h5>
@@ -127,24 +126,30 @@
           <span style="color:#ff4848;">■</span> 1차 감염
           <span style="color:#1adbe5;">■</span> 2차 감염
           <span style="color:#efd952;">■</span> 3차 감염
-          <div class="legendtext"><strong>최종 업데이트 </strong><span class="update"></span></div>
+          <div class="legendtext"><strong>최종 업데이트 </strong><br><span>2020-02-04 11:20:00</span></div>
         </p>
       </div>
     </div>
     </div>
-    <a
-      href="http://news.sbs.co.kr/news/newsPlusList.do?themeId=10000000114"
-      target="_blank"
-    >
+
       <div id="footerbar">
-        <img src="../mabulogo.png" alt="" id="mabulogo" />
+        <a href="http://news.sbs.co.kr/news/newsPlusList.do?themeId=10000000114" target="_blank">
+        <img src="../mabulogo.png" alt="" id="mabulogo" /> </a> 
+        <a id="kakao-link-btn" href="javascript:sendLink()">
+          <img src="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/kakao.png" alt="" class="social" id="kakao-link-btn">  </a>
+        <img src="http://img.sbs.co.kr/newimg/news/20170406/201037558.png" alt="" class="social" id="twitter">
+        <img src="http://img.sbs.co.kr/newimg/news/20170406/201037559.png" alt="" class="social" id="facebook">
+        <br>
         <p id="credit">
-          <strong>SBS데이터저널리즘팀 '마부작침'</strong><br />심영구 기자 (so5what@sbs.co.kr)<br />배여운 기자 | 정혜경 기자 | 디자인/개발 : 조애리
+          <!-- <strong>SBS데이터저널리즘팀 마부작침</strong> -->
+          <div class="credit">취재 <br> 디자인/개발 <br> 자료 <br> 문의 </div>
+          <div class="credit2"> 심영구 배여운 정혜경<br> 조애리 <br> 이유민 이승우 <br> so5what@sbs.co.kr </div>
         </p>
       </div>
-    </a>
+
     <script>
-      var width = window.innerWidth;
+      var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
+      var width =(iOS) ? screen.width : window.innerWidth;
       $(".canvas").css("height", width + 30);
       $(".canvas").css("width", width);
 
@@ -180,6 +185,57 @@
         ga("require", "displayfeatures");
         ga("send", "pageview");
       });
+
+      function sharefb(url) {
+        window.open('http://www.facebook.com/sharer/sharer.php?u=' + url);
+      };
+
+      function sharetwit(url, text) {
+        window.open('http://twitter.com/intent/tweet?text=' + text + '&url=' + url);
+      };
+
+      $('#facebook').on("click", function() {
+        sharefb('http://mabu.newscloud.sbs.co.kr/202002corona/mobile/index.html');
+      });
+
+      $('#twitter').on("click", function() {
+        sharetwit('http://mabu.newscloud.sbs.co.kr/202002corona/mobile/index.html', 'SBS마부작침: 신종 코로나 감염자 한눈에 보기');
+      });
+
+      Kakao.init('3304e8a619f256f70fd0c71f5cc846a7');
+      function sendLink() {
+          Kakao.Link.sendDefault({
+              objectType: 'feed',
+              content: {
+                title: '신형 코로나 감염자 한눈에 보기',
+                description: '신종 코로나바이러스 감염자 현황 인터랙티브 페이지',
+                imageUrl: 'https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/mabu.jpg',
+                link: {
+                  mobileWebUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html',
+                  webUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html'
+                }
+              },
+              buttons: [
+                {
+                  title: '웹으로 보기',
+                  link: {
+                    mobileWebUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html',
+                    webUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html'
+                  }
+                },
+                {
+                  title: '앱으로 보기',
+                  link: {
+                    mobileWebUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html',
+                    webUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html'
+                  }
+                }
+              ]
+          });
+      }
+
+
+
     </script>
     <script src="network.js"></script>
   </body>

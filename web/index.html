@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       property="og:image"
-      content="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/thumb.png"
+      content="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/thumb1.png"
     />
     <meta
       property="og:title"
@@ -29,6 +29,7 @@
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-ui.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../js/jquery-ui.css" />
   </head>
@@ -43,6 +44,10 @@
             >
               <img src="../mabulogo.png" alt="" id="mabulogo" />
             </a>
+            <a id="kakao-link-btn" href="javascript:sendLink()">
+              <img src="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/kakao.png" alt="" class="social" id="kakao-link-btn">  </a>
+              <img src="http://img.sbs.co.kr/newimg/news/20170406/201037558.png" alt="" class="social" id="twitter">
+              <img src="http://img.sbs.co.kr/newimg/news/20170406/201037559.png" alt="" class="social" id="facebook">
             <h3>신종 코로나 감염자<br />한눈에 보기</h3>
           </div>
           <div id="btnbox">
@@ -70,71 +75,72 @@
             /><label for="total">전체 보기</label>
           </div>
           <div class="articletext">
-            [한눈에 보기 사용법] <br />
-            1. <span>▶</span> 버튼을 누르면 일자별 자동 재생이 됩니다 <br />
-            2. <span>||</span> 버튼을 눌러 특정 시점 현황을 볼 수 있습니다
-            <br />
-            3. 전체보기 버튼을 누르면 신종 코로나 감염자 관계망이 나타납니다<br />
-            4. 슬라이더를 움직여 일자별로 확인할 수 있습니다<br />
-            5. 감염자(노드)와 관계선을 클릭하면 세부정보 및 관련기사를 볼 수
-            있습니다
-          </div>
-          <div id="datatab">
-            <p class="datatablTitle" id="datatablTitle">
-              인물 혹은 연결선을 클릭하세요
-            </p>
-            <table class="databox-link">
-              <tr>
-                <th id="firsthead-link"></th>
-                <td class="areaname" id="firsttext-link"></td>
-              </tr>
-            </table>
+            <h2>한눈에 보기 사용법</h2>
+            <ol>
+              <li><strong class="yellowText">감염자(노드)</strong>와 <strong class="yellowText">관계선</strong>을 클릭하면 세부정보 및 관련기사를 볼 수
+                있습니다</li>
+              <li>전체보기 버튼을 누르면 신종 코로나 감염자 관계망이 나타납니다</li>
+              <li>슬라이더를 움직여 일자별로 확인할 수 있습니다</li>
 
-            <table class="databox">
-              <tr>
-                <th id="firsthead"></th>
-                <td class="areaname" id="firsttext"></td>
-              </tr>
-              <tr>
-                <th id="secondhead"></th>
-                <td class="areaname" id="secondtext"></td>
-              </tr>
-              <tr>
-                <th id="thirdhead"></th>
-                <td class="areaname" id="thirdtext"></td>
-              </tr>
-              <tr>
-                <th id="fourthhead"></th>
-                <td class="areaname" id="fourthtext"></td>
-              </tr>
-              <tr>
-                <th id="fivehead"></th>
-                <td class="areaname" id="fivetext"></td>
-              </tr>
-              <tr>
-                <th id="sixhead"></th>
-                <td class="areaname" id="sixtext"></td>
-              </tr>
-              <tr>
-                <th id="sevenhead"></th>
-                <td class="areaname" id="seventext"></td>
-              </tr>
-              <tr>
-                <th id="eighthead"></th>
-                <td class="areaname" id="eighttext"></td>
-              </tr>
-              <tr>
-                <th id="ninehead"></th>
-                <td class="areaname" id="ninetext"></td>
-              </tr>
-              <tr>
-                <th id="tenhead"></th>
-                <td class="areaname" id="tentext"></td>
-              </tr>
-            </table>
+            </ol> 
           </div>
         </div>
-        <div id="articles"></div>
+        <div id="datatab">
+          <p class="datatablTitle" id="datatablTitle">
+            인물 혹은 연결선을 클릭하세요
+          </p>
+          <!-- <table class="databox-link">
+            <tr>
+              <th id="firsthead-link"></th>
+              <td class="areaname" id="firsttext-link"></td>
+            </tr>
+          </table> -->
+          <div id="firsthead-link" class="databox-link"></div>
+          <table class="databox">
+            <tr>
+              <th id="firsthead"></th>
+              <td class="areaname" id="firsttext"></td>
+            </tr>
+            <tr>
+              <th id="secondhead"></th>
+              <td class="areaname" id="secondtext"></td>
+            </tr>
+            <tr>
+              <th id="thirdhead"></th>
+              <td class="areaname" id="thirdtext"></td>
+            </tr>
+            <tr>
+              <th id="fourthhead"></th>
+              <td class="areaname" id="fourthtext"></td>
+            </tr>
+            <tr>
+              <th id="fivehead"></th>
+              <td class="areaname" id="fivetext"></td>
+            </tr>
+            <tr>
+              <th id="sixhead"></th>
+              <td class="areaname" id="sixtext"></td>
+            </tr>
+            <tr>
+              <th id="sevenhead"></th>
+              <td class="areaname" id="seventext"></td>
+            </tr>
+            <tr>
+              <th id="eighthead"></th>
+              <td class="areaname" id="eighttext"></td>
+            </tr>
+            <tr>
+              <th id="ninehead"></th>
+              <td class="areaname" id="ninetext"></td>
+            </tr>
+            <tr>
+              <th id="tenhead"></th>
+              <td class="areaname" id="tentext"></td>
+            </tr>
+          </table>
+
+          <div id="articles"></div>
+        </div>
       </div>
       <div id="canvas">
         <div class="rangeslider">
@@ -150,11 +156,15 @@
           <span style="color:#efd952;">■</span> 3차 감염<br />
         </p>
         <p class="legendtext">
-          <strong>최종 업데이트 </strong><span class="update"></span>
+          <strong>최종 업데이트 </strong><br><span>2020-02-04 11:20:00</span>
+        </p>
+        <p class="legendtext">
+          <strong>문의</strong><br><span >so5what@sbs.co.kr</span>
         </p>
         <p class="legendtext" id="credit">
-          <strong>SBS데이터저널리즘팀 '마부작침'</strong><br />심영구 기자
-          (so5what@sbs.co.kr) | 배여운 기자 | 정혜경 기자 | 디자인/개발 : 조애리
+          <strong>SBS데이터저널리즘팀<br> 마부작침</strong><br />
+          <div class="credit"> 심영구<br> 배여운<br> 정혜경<br> 조애리 <br> 이유민 <br> 이승우</div>
+          <div class="credit">취재 <br><br><br> 디자인 · 개발 <br> 자료  </div>
         </p>
       </div>
     </div>
@@ -184,6 +194,55 @@
         ga("send", "pageview");
       });
       $("#loader").hide();
+
+      function sharefb(url) {
+        window.open('http://www.facebook.com/sharer/sharer.php?u=' + url);
+      };
+
+      function sharetwit(url, text) {
+        window.open('http://twitter.com/intent/tweet?text=' + text + '&url=' + url);
+      };
+
+      $('#facebook').on("click", function() {
+        sharefb('http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html');
+      });
+
+      $('#twitter').on("click", function() {
+        sharetwit('http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html', 'SBS마부작침: 신종 코로나 감염자 한눈에 보기');
+      });
+
+      Kakao.init('3304e8a619f256f70fd0c71f5cc846a7');
+      function sendLink() {
+          Kakao.Link.sendDefault({
+              objectType: 'feed',
+              content: {
+                title: '신형 코로나 감염자 한눈에 보기',
+                description: '신종 코로나바이러스 감염자 현황 인터랙티브 페이지',
+                imageUrl: 'https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/mabu.jpg',
+                link: {
+                  mobileWebUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html',
+                  webUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html'
+                }
+              },
+              buttons: [
+                {
+                  title: '웹으로 보기',
+                  link: {
+                    mobileWebUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html',
+                    webUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html'
+                  }
+                },
+                {
+                  title: '앱으로 보기',
+                  link: {
+                    mobileWebUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html',
+                    webUrl: 'http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html'
+                  }
+                }
+              ]
+          });
+      }
+
     </script>
     <script src="network.js"></script>
   </body>

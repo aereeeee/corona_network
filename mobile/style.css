@@ -9,8 +9,15 @@ body {
   margin: 0;
   background: #2b292d;
   -ms-overflow-style: none;
+  /* -webkit-overflow-scrolling: touch; */
 }
-::-webkit-scrollbar {
+ol {
+  line-height: 170%;
+  padding-left: 25px;
+}
+
+
+*::-webkit-scrollbar {
   display: none;
 }
 ::-webkit-scrollbar-track {
@@ -30,14 +37,15 @@ body {
 }
 
 #footerbar {
-  width: 100%;
-  height: 90px;
+  /* width: 100%; */
+  height: 160px;
   background-color: #333333;
-  padding-top: 5px;
+  padding: 10px 10px 10px 10px;
+  text-align: left;
 }
 
 #credit {
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: #aaaaaa;
   font-weight: 350;
   margin: 10px 0px 0px 10px;
@@ -45,11 +53,33 @@ body {
   float: left;
 }
 
-#mabulogo {
-  width: 70px;
-  height: 30px;
+.credit {
+  text-align: left;
   float: left;
-  margin: 10px 0px 0px 10px;
+  width: 30%;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 350;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+}
+
+.credit2 {
+  text-align: left;
+  float: left;
+  width: 50%;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 350;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+}
+
+#mabulogo {
+  width: 90px;
+  height: 40px;
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
 
 /* 로드 */
@@ -197,7 +227,7 @@ h5 {
   font-size: 1.5rem;
 }
 .articletext {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.3rem;
   font-weight: 350;
   color: #aaaaaa;
@@ -257,6 +287,12 @@ td {
   overflow: hidden;
   white-space: nowrap;
 }
+
+.yellowText {
+  color: #f4d037;
+  font-weight: 500;
+}
+
 /* 버튼 */
 input[type="radio"] {
   display: none;
@@ -293,4 +329,10 @@ input[type="radio"].btnA:checked + label {
 
 #hidelink {
   display: none;
+}
+
+.social {
+  width: 45px;
+  height: 45px;
+  float: right;
 }

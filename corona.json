@@ -57,7 +57,7 @@
       "visit": "있음",
       "age": "54세",
       "check": "자가신고",
-      "contact": "95명"
+      "contact": "98명"
     },
     {
       "group": "A",
@@ -87,14 +87,14 @@
       "visit": "있음",
       "age": "33세",
       "check": "검역(능동감시)",
-      "contact": "29명"
+      "contact": "35명"
     },
     {
       "group": "B",
       "name": "6번 환자",
       "number": 6,
       "value": "2020-01-30",
-      "connect": "2차 감염",
+      "connect": "2차 감염(<-3번 환자)",
       "status": "양호",
       "hospital": "서울대병원",
       "country": "대한민국",
@@ -132,45 +132,45 @@
       "visit": "있음",
       "age": "62세",
       "check": "미확인",
-      "contact": "확인중"
+      "contact": "67명"
     },
     {
       "group": "B",
       "name": "9번 환자",
       "number": 9,
       "value": "2020-01-31",
-      "connect": "2차 감염",
-      "status": "미발표",
+      "connect": "2차 감염(<-5번 환자)",
+      "status": "양호",
       "hospital": "서울의료원",
       "country": "대한민국",
       "gender": "여성",
       "visit": "없음",
       "age": "28세",
       "check": "검역(능동감시)",
-      "contact": "확인중"
+      "contact": "2명"
     },
     {
       "group": "C",
       "name": "10번 환자",
       "number": 10,
       "value": "2020-01-31",
-      "connect": "3차 감염",
-      "status": "미발표",
+      "connect": "3차 감염(<-6번 환자)",
+      "status": "양호",
       "hospital": "서울대병원",
       "country": "대한민국",
       "gender": "여성",
       "visit": "없음",
       "age": "52세",
       "check": "검역(능동감시)",
-      "contact": "확인중"
+      "contact": "91명"
     },
     {
       "group": "C",
       "name": "11번 환자",
       "number": 11,
       "value": "2020-01-31",
-      "connect": "3차 감염",
-      "status": "미발표",
+      "connect": "3차 감염(<-6번 환자)",
+      "status": "양호",
       "hospital": "서울대병원",
       "country": "대한민국",
       "gender": "남성",
@@ -185,13 +185,73 @@
       "number": 12,
       "value": "2020-02-01",
       "connect": "1차 감염",
-      "status": "미발표",
+      "status": "고열, 폐렴",
       "hospital": "분당서울대병원",
       "country": "중국",
       "gender": "남성",
-      "visit": "없음",
+      "visit": "없음(일본 방문)",
       "age": "49세",
       "check": "검역(능동감시)",
+      "contact": "666명"
+    },
+    {
+      "group": "A",
+      "name": "13번 환자",
+      "number": 13,
+      "value": "2020-02-02",
+      "connect": "1차 감염",
+      "status": "미발표",
+      "hospital": "국립중앙의료원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "있음",
+      "age": "28세",
+      "check": "전세기 입국자",
+      "contact": "확인중"
+    },
+    {
+      "group": "B",
+      "name": "14번 환자",
+      "number": 14,
+      "value": "2020-02-02",
+      "connect": "2차 감염(확인중)",
+      "status": "미발표",
+      "hospital": "분당서울대병원",
+      "country": "중국",
+      "gender": "여성",
+      "visit": "없음",
+      "age": "40세",
+      "check": "검역(능동감시)",
+      "contact": "확인중"
+    },
+    {
+      "group": "A",
+      "name": "15번 환자",
+      "number": 15,
+      "value": "2020-02-02",
+      "connect": "1차 감염",
+      "status": "미발표",
+      "hospital": "국군수도병원",
+      "country": "대한민국",
+      "gender": "남성",
+      "visit": "있음",
+      "age": "43세",
+      "check": "검역(능동감시)",
+      "contact": "12명"
+    },
+    {
+      "group": "A",
+      "name": "16번 환자",
+      "number": 16,
+      "value": "2020-02-04",
+      "connect": "1차 감염",
+      "status": "확인중",
+      "hospital": "전남대병원",
+      "country": "대한민국",
+      "gender": "여성",
+      "visit": "없음(태국 방문)",
+      "age": "42세",
+      "check": "확인중",
       "contact": "확인중"
     }
   ],
@@ -421,6 +481,66 @@
         {
           "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005629164&oaid=N1005629290&plink=POP&cooper=SBSNEWSEND",
           "title": "'신종 코로나' 국내 12번째 환자…일본 환자 접촉 49세 중국 남성"
+        }
+      ]
+    },
+    { 
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "13번",
+      "target": 13,
+      "value": "2020-02-02",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005629817&plink=TOPHEAD&cooper=SBSNEWSMAIN",
+          "title": "[속보] '신종 코로나' 확진 환자 3명 추가…국내 총 15명"
+        }
+      ]
+    },
+    { 
+      "group": "B",
+      "start": "12번",
+      "source": 12,
+      "end": "14번",
+      "target": 14,
+      "value": "2020-02-02",
+      "connect": "2차 감염(확인중)",
+      "sbsarticle": [
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005629817&plink=TOPHEAD&cooper=SBSNEWSMAIN",
+          "title": "[속보] '신종 코로나' 확진 환자 3명 추가…국내 총 15명"
+        }
+      ]
+    },
+    { 
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "15번",
+      "target": 15,
+      "value": "2020-02-02",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005629817&plink=TOPHEAD&cooper=SBSNEWSMAIN",
+          "title": "[속보] '신종 코로나' 확진 환자 3명 추가…국내 총 15명"
+        }
+      ]
+    },
+    { 
+      "group": "A",
+      "start": "0번",
+      "source": 0,
+      "end": "16번",
+      "target": 16,
+      "value": "2020-02-04",
+      "connect": "1차 감염",
+      "sbsarticle": [
+        {
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1005632916&plink=TOPHEAD&cooper=SBSNEWSMAIN",
+          "title": "[속보] '신종 코로나' 16번째 확진 환자 발생"
         }
       ]
     }

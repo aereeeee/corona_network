@@ -32,13 +32,13 @@ $(document).ready(function() {
           return d.number;
         })
         .distance(function(d) {
-          return 40;
+          return 30;
         })
         .strength(function(d) {
           return 1;
         })
     )
-    .force("collide", d3.forceCollide(40))
+    .force("collide", d3.forceCollide(30))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
   var svg = d3
@@ -138,10 +138,10 @@ $(document).ready(function() {
           .append("svg:marker")
           .attr("id", color.replace("#", ""))
           .attr("viewBox", "0 -5 10 10")
-          .attr("refX", 15)
+          .attr("refX", 14)
           .attr("refY", 0)
-          .attr("markerWidth", 5)
-          .attr("markerHeight", 5)
+          .attr("markerWidth", 3)
+          .attr("markerHeight", 3)
           .attr("orient", "auto")
           .attr("xoverflow", "visible")
           .append("svg:path")
@@ -223,7 +223,7 @@ $(document).ready(function() {
           if (d.number === 0) {
             return "0";
           } else {
-            return "0.9rem";
+            return "0.7rem";
           }
         })
         .style("fill", function(d) {
@@ -283,7 +283,7 @@ $(document).ready(function() {
           if (d.number === 0) {
             return 15;
           } else {
-            return 10;
+            return 8;
           }
         })
         .style("fill", function(d) {
@@ -350,9 +350,9 @@ $(document).ready(function() {
         nodetext
           .attr("x", function(d) {
             if (d.number === 0) {
-              return d.x - 20;
+              return d.x - 10;
             } else {
-              return d.x - 20;
+              return d.x - 10;
             }
           })
           .attr("y", function(d) {
