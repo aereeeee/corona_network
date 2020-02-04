@@ -31,6 +31,7 @@
     <script src="../js/jquery-ui.js"></script>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-filter.css" />
     <link rel="stylesheet" href="../js/jquery-ui.css" />
   </head>
   <body>
@@ -38,6 +39,10 @@
       <div id="textbox">
         <div class="flextop">
           <div class="title">
+            <div class="menu">
+              <div class="menu-filter">조회</div>
+              <div class="menu-net">한눈에</div>
+            </div>
             <a
               href="http://news.sbs.co.kr/news/newsPlusList.do?themeId=10000000114"
               target="_blank"
@@ -48,7 +53,7 @@
               <img src="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/kakao.png" alt="" class="social" id="kakao-link-btn">  </a>
               <img src="http://img.sbs.co.kr/newimg/news/20170406/201037558.png" alt="" class="social" id="twitter">
               <img src="http://img.sbs.co.kr/newimg/news/20170406/201037559.png" alt="" class="social" id="facebook">
-            <h3>신종 코로나 감염자<br />한눈에 보기</h3>
+            <h3 id="menu-title">신종 코로나 감염자<br />한눈에 보기</h3>
           </div>
           <div id="btnbox">
             <input
@@ -89,12 +94,6 @@
           <p class="datatablTitle" id="datatablTitle">
             인물 혹은 연결선을 클릭하세요
           </p>
-          <!-- <table class="databox-link">
-            <tr>
-              <th id="firsthead-link"></th>
-              <td class="areaname" id="firsttext-link"></td>
-            </tr>
-          </table> -->
           <div id="firsthead-link" class="databox-link"></div>
           <table class="databox">
             <tr>
@@ -146,6 +145,9 @@
         <div class="rangeslider">
           <p id="yeartext"></p>
           <div id="slider1"></div>
+        </div>
+        <div class="filter">
+          filter
         </div>
         <div id="slider"></div>
       </div>
@@ -245,5 +247,6 @@
 
     </script>
     <script src="network.js"></script>
+    <script src="filter.js"></script>
   </body>
 </html>

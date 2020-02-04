@@ -1,0 +1,14 @@
+.menu {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  display: flex;
+}
+.filter {
+  color: #fff;
+  margin: 60px auto 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  height: 80px;
+  display: none;
+}
